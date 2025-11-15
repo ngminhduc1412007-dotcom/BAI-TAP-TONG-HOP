@@ -3,12 +3,16 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#define MAX 100 
 
 void function1();
 void function2();
 void function3();
 void function4();
 void function5();
+
+int arr[MAX];
+int n=0;
 
 int main(){
 	int choice;
@@ -63,8 +67,6 @@ int main(){
 }
 
 void function1(){
-	int n;
-	int arr[n];
 	printf ("----------------------#01#----------------------\n");
  	printf ("Nhap so luong phan tu can khoi tao: ");
  	scanf ("%d", &n);
@@ -79,12 +81,9 @@ void function1(){
  }
  
 void function2(){
-	int n;
-	int arr[n];
-	
 	printf ("----------------------#02#----------------------\n");
  	printf ("--------DANH SACH CAC PHAN TU TRONG MANG--------\n");
- 	printf ("[ \n");
+ 	printf ("[ ");
  	
  	for (int i = 0; i<n; i++){
  		printf ("%d", arr[i]);
@@ -95,8 +94,6 @@ void function2(){
 }
 
 void function3(){
-	int n;
-	int arr[n];
 	int pos;
 	int value;
 	
@@ -123,8 +120,6 @@ void function3(){
 }
 
 void function4(){
-	int n;
-	int arr[n];
 	int pos;
 	char confirm;
 	
@@ -137,7 +132,7 @@ void function4(){
 		return;
 	}
 	
-	printf ("Ban co chac chan muon xoa phan tu nay khong? (Y/N)");
+	printf ("Ban co chac chan muon xoa phan tu nay khong? (Y/N): ");
 	scanf (" %c", &confirm);
 	
 	if (confirm == 'Y'||confirm == 'y'){
@@ -153,8 +148,6 @@ void function4(){
 }
 
 void function5(){
-	int n;
-	int arr[n];
 	int pos;
 	int value;
 	
